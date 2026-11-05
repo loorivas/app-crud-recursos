@@ -1,0 +1,341 @@
+/* ==========================================================================
+   Reset Mínimo y Estilos Base
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-md);
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   Encabezados
+   ========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: var(--font-size-hero);
+}
+
+h2 {
+  font-size: var(--font-size-headline-lg);
+}
+
+h3 {
+  font-size: var(--font-size-headline-md);
+}
+
+h4 {
+  font-size: var(--font-size-headline-sm);
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-margin);
+  padding-right: var(--spacing-margin);
+}
+
+/* ==========================================================================
+   Componente: Botones (.btn)
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  height: 40px;
+  padding: 0 var(--space-md);
+  font-family: var(--font-body);
+  font-size: var(--font-size-label-md);
+  font-weight: 600;
+  line-height: 1;
+  border-radius: var(--radius-base);
+  border: 1px solid var(--color-transparent);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  border-color: var(--color-transparent);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-primary:active:not(:disabled) {
+  background-color: var(--color-primary-active);
+}
+
+.btn-secondary {
+  background-color: var(--color-transparent);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--color-bg-subtle);
+}
+
+.btn-ghost {
+  background-color: var(--color-transparent);
+  color: var(--color-text-secondary);
+  border-color: var(--color-transparent);
+}
+
+.btn-ghost:hover:not(:disabled) {
+  background-color: var(--color-bg-subtle);
+  color: var(--color-text);
+}
+
+.btn-danger {
+  background-color: var(--color-error);
+  color: var(--color-white);
+  border-color: var(--color-transparent);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background-color: var(--color-error-hover);
+}
+
+/* ==========================================================================
+   Componentes: Formularios (.input y .select)
+   ========================================================================== */
+.input,
+.select {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 var(--space-md);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-md);
+  color: var(--color-text);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: var(--focus-ring-halo);
+}
+
+/* Estado de error en inputs y selects */
+.input.error,
+.input.has-error,
+.input:invalid:not(:placeholder-shown),
+.select.error,
+.select.has-error {
+  border-color: var(--color-error);
+}
+
+.input.error:focus,
+.input.has-error:focus,
+.select.error:focus,
+.select.has-error:focus {
+  outline: none;
+  border-color: var(--color-error);
+  box-shadow: var(--error-ring-halo);
+}
+
+/* ==========================================================================
+   Componente: Tarjeta (.card)
+   ========================================================================== */
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ==========================================================================
+   Componente: Badges (.badge)
+   ========================================================================== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: 2px 8px;
+  border-radius: var(--radius-badge);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-code-sm);
+  font-weight: 500;
+  line-height: 1.4;
+  border: 1px solid var(--color-transparent);
+  white-space: nowrap;
+}
+
+.badge--video {
+  color: var(--color-badge-video-fg);
+  background-color: var(--color-badge-video-bg);
+  border-color: var(--color-badge-video-border);
+}
+
+.badge--article {
+  color: var(--color-badge-article-fg);
+  background-color: var(--color-badge-article-bg);
+  border-color: var(--color-badge-article-border);
+}
+
+.badge--docs {
+  color: var(--color-badge-docs-fg);
+  background-color: var(--color-badge-docs-bg);
+  border-color: var(--color-badge-docs-border);
+}
+
+.badge--course {
+  color: var(--color-badge-course-fg);
+  background-color: var(--color-badge-course-bg);
+  border-color: var(--color-badge-course-border);
+}
+
+.badge--tool {
+  color: var(--color-badge-tool-fg);
+  background-color: var(--color-badge-tool-bg);
+  border-color: var(--color-badge-tool-border);
+}
+
+/* ==========================================================================
+   Componente: Barra de Navegación (.navbar)
+   ========================================================================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0 var(--spacing-margin);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+}
+
+/* ==========================================================================
+   Componente: Notificación Toast (.toast)
+   ========================================================================== */
+.toast {
+  position: fixed;
+  bottom: var(--spacing-margin);
+  right: var(--spacing-margin);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-base);
+  box-shadow: var(--shadow-overlay);
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-md);
+  font-weight: 500;
+  z-index: 100;
+  animation: toast-fade-in 0.2s ease-out;
+}
+
+@keyframes toast-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   Responsive: Breakpoints de 768px y 1024px
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .container {
+    padding-left: var(--spacing-gutter);
+    padding-right: var(--spacing-gutter);
+  }
+
+  h1 {
+    font-size: var(--font-size-display-hero-mobile);
+  }
+
+  h2 {
+    font-size: var(--font-size-headline-lg-mobile);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: var(--spacing-margin-mobile);
+    padding-right: var(--spacing-margin-mobile);
+  }
+
+  .navbar {
+    padding-left: var(--spacing-margin-mobile);
+    padding-right: var(--spacing-margin-mobile);
+  }
+
+  .toast {
+    bottom: var(--spacing-margin-mobile);
+    right: var(--spacing-margin-mobile);
+    left: var(--spacing-margin-mobile);
+    justify-content: center;
+  }
+}

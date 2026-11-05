@@ -1,0 +1,318 @@
+/* ==========================================================================
+   Vistas: Home (Bienvenida)
+   ========================================================================== */
+.home-view {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  padding: var(--space-xl) 0;
+}
+
+.home-hero {
+  text-align: center;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-xl) 0;
+}
+
+.hero-title {
+  font-size: var(--font-size-display-hero);
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-body-lg);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+}
+
+.hero-actions {
+  margin-top: var(--space-sm);
+}
+
+.home-section {
+  width: 100%;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-xs);
+}
+
+.stat-value {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-display-hero);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: var(--font-size-body-md);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.feature-title {
+  font-size: var(--font-size-headline-sm);
+  color: var(--color-text);
+}
+
+.feature-desc {
+  font-size: var(--font-size-body-md);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Vistas: Listado de Recursos
+   ========================================================================== */
+.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding: var(--space-xl) 0;
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.list-title {
+  font-size: var(--font-size-headline-lg);
+  color: var(--color-text);
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.resource-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.favorite-star {
+  color: var(--color-warning);
+  font-size: var(--font-size-headline-sm);
+  line-height: 1;
+}
+
+.resource-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.resource-title {
+  font-size: var(--font-size-headline-sm);
+  line-height: 1.3;
+}
+
+.resource-title a {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.resource-title a:hover {
+  color: var(--color-primary);
+}
+
+.resource-domain {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-code-sm);
+  color: var(--color-text-secondary);
+  word-break: break-all;
+}
+
+.resource-card-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  font-size: var(--font-size-body-sm);
+  color: var(--color-text-secondary);
+}
+
+.meta-tag {
+  font-weight: 500;
+}
+
+.meta-dot {
+  color: var(--color-text-secondary);
+}
+
+.meta-date {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-code-sm);
+}
+
+.resource-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--space-xs);
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-xl);
+  gap: var(--space-md);
+}
+
+.empty-state-message {
+  font-size: var(--font-size-body-lg);
+  color: var(--color-text-secondary);
+}
+
+/* ==========================================================================
+   Vistas: Formulario de Recurso
+   ========================================================================== */
+.form-view {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: var(--space-xl) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.form-title {
+  font-size: var(--font-size-headline-lg);
+  color: var(--color-text);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.form-label {
+  font-size: var(--font-size-label-md);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.form-error {
+  font-size: var(--font-size-body-sm);
+  color: var(--color-error);
+  min-height: 1.25rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  padding: var(--space-xs) 0;
+}
+
+.radio-label,
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--font-size-body-md);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+/* ==========================================================================
+   Responsive: Breakpoints Tablet (1024px) y Móvil (768px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .resource-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-grid,
+  .features-grid,
+  .resource-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .list-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .list-header .btn {
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: var(--font-size-display-hero-mobile);
+  }
+
+  .home-hero {
+    padding: var(--space-lg) 0;
+  }
+
+  .form-view {
+    padding: var(--space-md) 0;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,215 @@
+:root {
+  /* Colores Base y Neutros (Light Mode) */
+  --color-bg: #F8FAFC;
+  --color-fondo: #F8FAFC;
+  --color-bg-subtle: #F1F5F9;
+  --color-surface: #FFFFFF;
+  --color-superficie: #FFFFFF;
+  --color-border: #E2E8F0;
+  --color-borde: #E2E8F0;
+  --color-border-subtle: #CBD5E1;
+  --color-text: #0F172A;
+  --color-texto-principal: #0F172A;
+  --color-text-main: #0F172A;
+  --color-text-secondary: #64748B;
+  --color-texto-secundario: #64748B;
+  --color-text-muted: #64748B;
+
+  /* Colores de Interacción y Marca */
+  --color-primary: #6366F1;
+  --color-primario: #6366F1;
+  --color-primary-hover: #4F46E5;
+  --color-primario-hover: #4F46E5;
+  --color-primary-active: #4338CA;
+  --color-primario-active: #4338CA;
+  --color-on-primary: #FFFFFF;
+
+  /* Acento y Estados del Sistema */
+  --color-accent: #06B6D4;
+  --color-acento: #06B6D4;
+  --color-success: #10B981;
+  --color-exito: #10B981;
+  --color-success-bg: #ECFDF5;
+  --color-warning: #F59E0B;
+  --color-advertencia: #F59E0B;
+  --color-warning-bg: #FFFBEB;
+  --color-error: #EF4444;
+  --color-danger: #EF4444;
+  --color-error-hover: #DC2626;
+  --color-error-bg: #FEF2F2;
+
+  /* Utilidades de Color */
+  --color-white: #FFFFFF;
+  --color-transparent: transparent;
+
+  /* Badges de Tipos de Recurso (Light Mode) */
+  --color-badge-video-fg: #EF4444;
+  --color-badge-video-bg: #FEE2E2;
+  --color-badge-video-border: #FCA5A5;
+
+  --color-badge-article-fg: #3B82F6;
+  --color-badge-article-bg: #DBEAFE;
+  --color-badge-article-border: #93C5FD;
+
+  --color-badge-docs-fg: #10B981;
+  --color-badge-docs-bg: #D1FAE5;
+  --color-badge-docs-border: #6EE7B7;
+
+  --color-badge-course-fg: #F59E0B;
+  --color-badge-course-bg: #FEF3C7;
+  --color-badge-course-border: #FCD34D;
+
+  --color-badge-tool-fg: #8B5CF6;
+  --color-badge-tool-bg: #EDE9FE;
+  --color-badge-tool-border: #C4B5FD;
+
+  /* Tipografías */
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-code: 'JetBrains Mono', monospace;
+
+  /* Tamaños de Fuente */
+  --font-size-display-hero: 40px;
+  --font-size-display-hero-mobile: 30px;
+  --font-size-headline-lg: 32px;
+  --font-size-headline-lg-mobile: 24px;
+  --font-size-headline-md: 24px;
+  --font-size-headline-sm: 18px;
+  --font-size-body-lg: 16px;
+  --font-size-body-md: 14px;
+  --font-size-body-sm: 12px;
+  --font-size-label-md: 14px;
+  --font-size-label-sm: 12px;
+  --font-size-code-md: 13px;
+  --font-size-code-sm: 11px;
+
+  /* Espaciado */
+  --spacing-gutter: 1.5rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-margin: 2rem;
+  --spacing-margin-mobile: 1rem;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+
+  /* Radios */
+  --radius-sm: 0.25rem;
+  --radius-base: 0.5rem;
+  --radius-default: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+  --radius-badge: 6px;
+
+  /* Sombras (Light Mode) */
+  --shadow-card: 0 1px 3px 0 rgba(15, 23, 42, 0.05);
+  --shadow-hover: 0 4px 12px -2px rgba(99, 102, 241, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.06);
+  --shadow-overlay: 0 20px 25px -5px rgba(15, 23, 42, 0.12), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+
+  /* Anillos de Foco */
+  --focus-ring: 0 0 0 2px rgba(99, 102, 241, 0.4);
+  --focus-ring-halo: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  --error-ring-halo: 0 0 0 3px rgba(239, 68, 68, 0.15);
+}
+
+/* Modo Oscuro: prefers-color-scheme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0F172A;
+    --color-fondo: #0F172A;
+    --color-bg-subtle: #1E293B;
+    --color-surface: #1E293B;
+    --color-superficie: #1E293B;
+    --color-border: #334155;
+    --color-borde: #334155;
+    --color-border-subtle: #475569;
+    --color-text: #F8FAFC;
+    --color-texto-principal: #F8FAFC;
+    --color-text-main: #F8FAFC;
+    --color-text-secondary: #94A3B8;
+    --color-texto-secundario: #94A3B8;
+    --color-text-muted: #94A3B8;
+
+    --color-badge-video-fg: #F87171;
+    --color-badge-video-bg: rgba(239, 68, 68, 0.15);
+    --color-badge-video-border: rgba(239, 68, 68, 0.30);
+
+    --color-badge-article-fg: #60A5FA;
+    --color-badge-article-bg: rgba(59, 130, 246, 0.15);
+    --color-badge-article-border: rgba(59, 130, 246, 0.30);
+
+    --color-badge-docs-fg: #34D399;
+    --color-badge-docs-bg: rgba(16, 185, 129, 0.15);
+    --color-badge-docs-border: rgba(16, 185, 129, 0.30);
+
+    --color-badge-course-fg: #FBBF24;
+    --color-badge-course-bg: rgba(245, 158, 11, 0.15);
+    --color-badge-course-border: rgba(245, 158, 11, 0.30);
+
+    --color-badge-tool-fg: #A78BFA;
+    --color-badge-tool-bg: rgba(139, 92, 246, 0.15);
+    --color-badge-tool-border: rgba(139, 92, 246, 0.30);
+
+    --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 4px 12px -2px rgba(99, 102, 241, 0.2), 0 2px 6px -1px rgba(0, 0, 0, 0.25);
+    --shadow-overlay: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+
+    --focus-ring: 0 0 0 2px rgba(129, 140, 248, 0.4);
+    --focus-ring-halo: 0 0 0 3px rgba(129, 140, 248, 0.2);
+    --error-ring-halo: 0 0 0 3px rgba(239, 68, 68, 0.25);
+  }
+}
+
+/* Modo Oscuro: selector de atributo [data-theme="dark"] */
+[data-theme="dark"] {
+  --color-bg: #0F172A;
+  --color-fondo: #0F172A;
+  --color-bg-subtle: #1E293B;
+  --color-surface: #1E293B;
+  --color-superficie: #1E293B;
+  --color-border: #334155;
+  --color-borde: #334155;
+  --color-border-subtle: #475569;
+  --color-text: #F8FAFC;
+  --color-texto-principal: #F8FAFC;
+  --color-text-main: #F8FAFC;
+  --color-text-secondary: #94A3B8;
+  --color-texto-secundario: #94A3B8;
+  --color-text-muted: #94A3B8;
+
+  --color-badge-video-fg: #F87171;
+  --color-badge-video-bg: rgba(239, 68, 68, 0.15);
+  --color-badge-video-border: rgba(239, 68, 68, 0.30);
+
+  --color-badge-article-fg: #60A5FA;
+  --color-badge-article-bg: rgba(59, 130, 246, 0.15);
+  --color-badge-article-border: rgba(59, 130, 246, 0.30);
+
+  --color-badge-docs-fg: #34D399;
+  --color-badge-docs-bg: rgba(16, 185, 129, 0.15);
+  --color-badge-docs-border: rgba(16, 185, 129, 0.30);
+
+  --color-badge-course-fg: #FBBF24;
+  --color-badge-course-bg: rgba(245, 158, 11, 0.15);
+  --color-badge-course-border: rgba(245, 158, 11, 0.30);
+
+  --color-badge-tool-fg: #A78BFA;
+  --color-badge-tool-bg: rgba(139, 92, 246, 0.15);
+  --color-badge-tool-border: rgba(139, 92, 246, 0.30);
+
+  --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 4px 12px -2px rgba(99, 102, 241, 0.2), 0 2px 6px -1px rgba(0, 0, 0, 0.25);
+  --shadow-overlay: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+
+  --focus-ring: 0 0 0 2px rgba(129, 140, 248, 0.4);
+  --focus-ring-halo: 0 0 0 3px rgba(129, 140, 248, 0.2);
+  --error-ring-halo: 0 0 0 3px rgba(239, 68, 68, 0.25);
+}
