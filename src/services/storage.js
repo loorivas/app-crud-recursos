@@ -15,6 +15,15 @@ export function getAll() {
 }
 
 /**
+ * Obtiene un recurso por su ID usando find, o null si no existe.
+ */
+export function getById(id) {
+  const resources = getAll();
+  const resource = resources.find((item) => item.id === id);
+  return resource || null;
+}
+
+/**
  * Guarda un nuevo recurso con ID único y fecha de creación.
  */
 export function create(data) {
@@ -27,6 +36,30 @@ export function create(data) {
   resources.push(newResource);
   localStorage.setItem(STORAGE_KEY, JSON.stringify(resources));
   return newResource;
+}
+
+/**
+ * Actualiza un recurso existente combinando sus datos (conserva id y fechaCreacion).
+ * Si no existe, devuelve null.
+ */
+export function update(id, data) {
+  const resources = getAll();
+  const index = resources.findIndex((item) => item.id === id);
+  if (index === -1) {
+    return null;
+  }
+
+  const recursoActual = resources[index];
+  const updatedResource = {
+    ...recursoActual,
+    ...data,
+    id: recursoActual.id,
+    fechaCreacion: recursoActual.fechaCreacion,
+  };
+
+  resources[index] = updatedResource;
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(resources));
+  return updatedResource;
 }
 
 /**
